@@ -51,7 +51,7 @@ EMAIL_HOST_PASSWORD = 'MZzJM3srVpx0LshwqcSp'
 #### Запуск
 Для запуска сайта перейдите в директорию _zoofriends_ командой:
 ```
-cd zoofriends
+cd business_card
 ```
 
 И введите в консоль:
