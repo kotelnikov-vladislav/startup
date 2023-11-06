@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Агробот</title>
+{% endblock title %}
+
+{% block content %}
+{% include './index_sections/home.html' %}
+{% include './index_sections/about.html' %}
+{% include './index_sections/service.html' %}
+{% include './index_sections/team.html' %}
+{% include './index_sections/partners.html' %}
+{% endblock content %}
+
+{% block script %}
+<script src="{% static 'scripts/index.1.754c9834eed3a892fc10.js' %}"></script>
+{% endblock script %}

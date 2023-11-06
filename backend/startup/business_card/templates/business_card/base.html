@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    {% block title %}
+    {% endblock title %}
+</head>
+
+<body>
+    <main class="wrapper">
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="logo" href="{% url 'index' %}">
+                        <img src="{% static 'images/logo.a82ce535d53b58038834.png' %}"></a>
+                    <nav class="nav header__nav">
+                        <div class="nav__top">
+                            <a class="logo logo--mobile nav__mobile-logo">
+                                <img src="{% static 'images/logo.a82ce535d53b58038834.png' %}"></a>
+                            <button class="burger burger--active nav__burger" id="mobile-burger">
+                                <span class="burger__line"></span>
+                                <span class="burger__line"></span>
+                                <span class="burger__line"></span>
+                            </button>
+                        </div>
+                        <div class="nav__menu">
+                            <ul class="link-list link-list--dir-column">
+                                <li class="link-list__link">
+                                    <a href="{% url 'order-service' %}">Заказать услуги</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav__bottom">
+                            <p class="nav__copyright">© ООО "СТАРТАП", 2023</p>
+                        </div>
+                    </nav>
+                    <button class="burger header__burger" id="desktop-burger">
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        {% block content %}{% endblock content %}
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <p class="footer__copyright">© ООО "СТАРТАП", 2023</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    {% block script %}{% endblock script %}
+</body>
+
+</html>

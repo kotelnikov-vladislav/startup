@@ -1,0 +1,63 @@
+include ../../mixins/card/card.pug
+
+section.page.fade-in-section.team
+    .container
+        .team__inner
+            h2.page__title Познакомьтесь с нашей командой
+            p.page__subtitle.subtitle.team__subtitle
+                | Команда нашей компании состоит из талантливых и опытных разработчиков, дизайнеров, маркетологов
+
+            .team__carousel
+                .carousel
+                    ul.carousel__list-items
+                        li.carousel__list-item
+                            .team__card
+                                +profile-card(
+                                    'Никольский Всеволод',
+                                    'yellow',
+                                    '../../images/team/people1.png',
+                                    'Product Designer',
+                                    '/',
+                                    '/',
+                                    '/'
+                                )
+                        li.carousel__list-item
+                            .team__card
+                                +profile-card(
+                                    'Попова Анастасия',
+                                    'green',
+                                    '../../images/team/people2.png',
+                                    'Lead developer',
+                                    '/',
+                                    '/',
+                                    '/'
+                                )
+                        li.carousel__list-item
+                            .team__card
+                                +profile-card(
+                                    'Сергеев Тимофей',
+                                    'pink',
+                                    '../../images/team/people3.png',
+                                    'Experience Designer',
+                                    '/',
+                                    '/',
+                                    '/'
+                                )
+                        li.carousel__list-item
+                            .team__card
+                                +profile-card(
+                                    'Белова Валерия',
+                                    'green',
+                                    '../../images/team/people4.png',
+                                    'User interface designer',
+                                    '/',
+                                    '/',
+                                    '/'
+                                )
+                    .carousel__control
+                        button.carousel-ctrl-btn.carousel__next
+                            .carousel-ctrl-btn__inner
+                                img(src=require('../../icons/general/triangle-down.svg') alt='next')
+                        button.carousel-ctrl-btn.carousel__back
+                            .carousel-ctrl-btn__inner    
+                                img(src=require('../../icons/general/triangle-down.svg') alt='back')

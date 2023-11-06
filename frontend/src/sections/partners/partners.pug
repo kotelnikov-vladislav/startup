@@ -1,0 +1,37 @@
+include ../../mixins/tabs/tabs.pug
+
+mixin partner-card(title, img_url)
+    .partner-card
+        .partner-card__image
+            img(src=require(img_url))
+        h3.partner-card__title= title
+
+section.page.fade-in-section.partners
+    .container
+        .partners__inner
+            h2.page__title.partners__title Партнеры
+            p.page__subtitle.partners__subtitle
+                | Партнеры помогают нам повысить качество предоставляемых
+                | услуг
+            
+            ul.partners__partner-list
+                li.partners__partner
+                    +partner-card(
+                        'NetWorks',
+                        '../../images/partners/NetWorks.png'
+                    )
+                li.partners__partner
+                    +partner-card(
+                        'WebSoulutions',
+                        '../../images/partners/WebSoulutions.png'
+                        )
+                li.partners__partner
+                    +partner-card(
+                        'CodeWave',
+                        '../../images/partners/CodeWave.png'
+                    )
+                li.partners__partner
+                    +partner-card(
+                        'DigitalTechCo',
+                        '../../images/partners/DigitalTechCo.png'
+                    )

@@ -1,0 +1,30 @@
+mixin burger(is_active=false)
+    - var btn_class = 'burger';
+    - btn_class += is_active ? ' burger--active' : '';
+
+    button(class=btn_class class!=attributes.class id!=attributes.id)
+        span.burger__line
+        span.burger__line
+        span.burger__line
+
+header.header#header
+    .container
+        .header__inner
+            a(class='logo' href='/')
+                img(src=require('../../images/general/logo.png'))
+            nav.nav.header__nav
+                //- Блок виден только на мобильных устройствах 
+                .nav__top
+                    a(class='logo logo--mobile nav__mobile-logo')
+                        img(src=require('../../images/general/logo.png'))
+                    +burger(true)(class='nav__burger' id='mobile-burger')
+
+                .nav__menu
+                    ul.link-list.link-list--dir-column
+                        li.link-list__link
+                            a(href='/order-service.html') Заказать услуги
+
+                //- Блок виден только на мобильных устройствах
+                .nav__bottom
+                    p.nav__copyright © ООО "БОРЩЕВИК.НЕТ", 2023
+            +burger()(class='header__burger' id='desktop-burger')

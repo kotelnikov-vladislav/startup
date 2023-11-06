@@ -1,0 +1,31 @@
+.service {
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__subtitle {
+        margin: 20px auto 0 auto;
+        max-width: 550px;
+        text-align: center;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+        li {
+            flex: 1 1 0;
+            min-width: 286px;
+            max-width: 315px;
+        }
+    }
+
+    &__link {
+        margin: 20px 0 64px 0;
+    }
+}

@@ -1,0 +1,14 @@
+.footer {
+    background-color: #FFF5ED;
+    padding: 36px 0;
+    margin-top: auto;
+
+    &__inner {
+        padding: 0 36px;
+    }
+
+    &__copyright {
+        opacity: .6;
+        font-size: #{get-rem(14)}rem;
+    }
+}

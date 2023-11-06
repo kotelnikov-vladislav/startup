@@ -1,0 +1,14 @@
+extends ./templates/page.pug
+
+block head
+    title Агробот
+
+block main
+    include ./sections/home/home.pug
+    include ./sections/about/about.pug
+    include ./sections/service/service.pug
+    include ./sections/team/team.pug
+    include ./sections/partners/partners.pug
+
+block scripts
+    script(src=require('./scripts/index.js'))

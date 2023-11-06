@@ -1,0 +1,62 @@
+{% load static %}
+
+<section class="page fade-in-section service">
+    <div class="container">
+        <div class="service__inner">
+            <h2 class="page__title">
+                Развивайте свой стартап с помощью наших услуг
+            </h2>
+            <p class="page__subtitle subtitle service__subtitle">
+                Наши клиенты получают высококачественные услуги
+                по разработке
+                и продвижению сайтов, что позволяет им достигать поставленных
+                целей и увеличивать прибыль своего бизнеса
+            </p>
+            <a class="service__link link link--as-btn" href="{% url 'order-service' %}">Заказать услуги</a>
+            <ul class="service__cards">
+                <li>
+                    <div class="info-card">
+                        <div class="info-card__image">
+                            <img src="{% static 'images/marketing.709f5f3d1f89dc0d6d8e.png' %}">
+                        </div>
+                        <div class="info-card__body">
+                            <h3 class="info-card__title">Разработка сайта</h3>
+                            <p class="info-card__describe">
+                                Мы специализируется на разработке качественных и
+                                функциональных сайтов для наших клиентов
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-card">
+                        <div class="info-card__image">
+                            <img src="{% static 'images/development.e502410272258596ca59.png' %}">
+                        </div>
+                        <div class="info-card__body">
+                            <h3 class="info-card__title">Создание контента</h3>
+                            <p class="info-card__describe">
+                                Мы предлагаем услуги по созданию уникального и
+                                качественного контента для вашего сайта или блога
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-card">
+                        <div class="info-card__image">
+                            <img src="{% static 'images/enterprise.53b87d1b42be949987da.png' %}">
+                        </div>
+                        <div class="info-card__body">
+                            <h3 class="info-card__title">Продвижение сайта</h3>
+                            <p class="info-card__describe">
+                                Мы предлагаем услуги по продвижению сайтов в
+                                поисковых системах и социальных сетях
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

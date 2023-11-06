@@ -1,0 +1,14 @@
+doctype html
+html(lang= 'en')
+    head
+        meta(charset='utf-8')
+        link(rel='stylesheet', href=require('../style/main.scss'))
+        meta(name="viewport" content="width=device-width, user-scalable=yes")
+        block head
+    body
+        main.wrapper
+            include ../sections/head/head.pug
+            block main
+            include ../sections/footer/footer.pug
+            
+        block scripts

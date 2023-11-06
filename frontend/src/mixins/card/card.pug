@@ -1,0 +1,24 @@
+mixin info-card(title, imgUrl, describe, linkUrl='')
+    .info-card
+        .info-card__image
+            img(src=require(`./${imgUrl}`) alt=title)
+        .info-card__body
+            h3.info-card__title= title
+            p.info-card__describe= describe
+
+            if linkUrl != ''
+                a(class='info-card__learn-more' href=linkUrl) Learn more
+
+mixin profile-card(name, imgBgColor, imgUrl, specialization, vkUrl='', tgUrl='', emailUrl='')
+    .profile-card
+        div(class='profile-card__images profile-card__images--bg-' + imgBgColor)
+            img(src=require(`./${imgUrl}`) alt=name)
+        h3.profile-card__name= name
+        p.profile-card__specialization= specialization
+        ul.profile-card__social-links
+            li.profile-card__social-link.profile-card__social-link--vk
+                a(href=vkUrl)
+            li.profile-card__social-link.profile-card__social-link--tg
+                a(href=tgUrl)
+            li.profile-card__social-link.profile-card__social-link--email
+                a(href=emailUrl)

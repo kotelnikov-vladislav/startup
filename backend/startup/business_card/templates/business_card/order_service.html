@@ -1,0 +1,122 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Агробот - заказ услуг</title>
+{% endblock title %}
+
+{% block content %}
+<section class="page order">
+    <div class="container">
+        <div class="order__inner">
+            <div class="order__col">
+                <div class="order__info">
+                    <div class="order__image">
+                        <img src="{% static 'images/image.5b42e12d29c3e04e4552.png' %}">
+                    </div>
+                    <div class="order__price">
+                        <h2 id="total-price">Итоговая стоимость - 15 000 руб*</h2>
+                        <span>
+                            *Цены уточняйте по почте
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="order__col">
+                <div class="order__header">
+                    <h1 class="order__title">Расчет услуг для ваших задач</h1>
+                </div>
+                <form action="{% url 'order-service' %}" method="post" class="order__form">
+                    {% csrf_token %}
+                    <ul class="order__conf-list">
+                        <li class="order__conf-item">
+                            <h2>Разработка сайта</h2>
+                            <div class="conf-bool-select" id="bool-select-1" data-name="site-development">
+                                <label class="conf-bool-select__option conf-bool-select__option--select" data-price="0">
+                                    <input type="radio" checked name="site-development" value="0">
+                                    <div class="conf-bool-select__content">
+                                        <span class="conf-bool-select__label auto-fs-label">Нет, спасибо</span>
+                                    </div>
+                                </label>
+                                <label class="conf-bool-select__option" data-price="20000">
+                                    <input type="radio" name="site-development" value="20000">
+                                    <div class="conf-bool-select__content">
+                                        <span class="conf-bool-select__label auto-fs-label">Добавить</span>
+                                        <span class="conf-bool-select__price auto-fs-price">
+                                            + 20 000 рублей за
+                                            страницу
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="order__conf-item">
+                            <h2>Создание контента</h2>
+                            <div class="conf-bool-select" id="bool-select-2" data-name="content-creation">
+                                <label class="conf-bool-select__option conf-bool-select__option--select" data-price="0">
+                                    <input type="radio" checked name="content-creation" value="0">
+                                    <div class="conf-bool-select__content">
+                                        <span class="conf-bool-select__label auto-fs-label">Нет, спасибо</span>
+                                    </div>
+                                </label>
+                                <label class="conf-bool-select__option" data-price="5000">
+                                    <input type="radio" name="content-creation" value="5000">
+                                    <div class="conf-bool-select__content">
+                                        <span class="conf-bool-select__label auto-fs-label">Добавить</span>
+                                        <span class="conf-bool-select__price auto-fs-price">
+                                            + 5 000 рублей за
+                                            страницу
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="order__conf-item">
+                            <h2>Продвижение сайта</h2>
+                            <div class="conf-bool-select" id="bool-select-3" data-name="website-promotion">
+                                <label class="conf-bool-select__option conf-bool-select__option--select" data-price="0">
+                                    <input type="radio" checked name="website-promotion" value="0">
+                                    <div class="conf-bool-select__content">
+                                        <span class="conf-bool-select__label auto-fs-label">Нет, спасибо</span>
+                                    </div>
+                                </label>
+                                <label class="conf-bool-select__option" data-price="5000">
+                                    <input type="radio" name="website-promotion" value="5000">
+                                    <div class="conf-bool-select__content">
+                                        <span class="conf-bool-select__label auto-fs-label">Добавить</span>
+                                        <span class="conf-bool-select__price auto-fs-price">
+                                            + 5 000 рублей за
+                                            страницу
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="order__conf-item">
+                            <h2>Количество страниц</h2>
+                            <div class="conf-int-select" id="int-select-1" data-name="count-pages">
+                                <button class="conf-int-select__btn conf-int-select__btn--dec">-</button>
+                                <input type="number" name="count-pages" min="1" value="1">
+                                <button class="conf-int-select__btn conf-int-select__btn--inc" type="button">+</button>
+                            </div>
+                        </li>
+                        <li class="order__conf-item">
+                            <h2>Отправка заявки для заказа</h2>
+                            <div class="email-field">
+                                <div class="email-field__input-wrapper">
+                                    <input type="email" name="email" placeholder="Email для обратной связи">
+                                </div>
+                                <button class="btn btn--bg-pink">Отправить</button>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block script %}
+<script src="{% static 'scripts/order.b0558521b11e39c15004.js' %}"></script>
+{% endblock script %}

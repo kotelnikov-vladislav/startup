@@ -1,0 +1,21 @@
+mixin tabs(id)
+    div(class='tabs' id='tabs-' + id)
+        ul.tabs__tab-list
+            block
+        .tabs__dividor
+            span.tabs__line
+            span.tabs__underline
+
+mixin tab()
+    li.tabs__tab
+        button
+            block
+
+//
+    div(class='pdc' id='pdc-<id>')
+        .pdc__content.pdc__content--show
+            p Котент первого таба
+        .pdc__content
+            p Котент второго таба
+        .pdc__content
+            p Котент третьего таба

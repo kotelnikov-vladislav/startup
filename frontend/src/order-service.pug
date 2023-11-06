@@ -1,0 +1,91 @@
+extends ./templates/page.pug
+
+mixin conf-bool-select(name, label, displayedPrice, price,  id)
+    div(class='conf-bool-select' id=id data-name=name)
+        label(class='conf-bool-select__option conf-bool-select__option--select' data-price=0)
+            input(type='radio' name=name value=false)
+            .conf-bool-select__content
+                span.conf-bool-select__label.auto-fs-label Нет, спасибо
+
+        label(class='conf-bool-select__option' data-price=price)
+            input(type='radio', name=name, value=true)
+            .conf-bool-select__content
+                span.conf-bool-select__label.auto-fs-label= label
+                span.conf-bool-select__price.auto-fs-price= displayedPrice
+
+
+mixin conf-int-select(name, id)
+    div(class='conf-int-select' id=id data-name=name)
+        button.conf-int-select__btn.conf-int-select__btn--dec -
+        input(type='number' name='square' min=1 value=1)
+        button(type='button').conf-int-select__btn.conf-int-select__btn--inc +
+
+        
+mixin email-field()
+    .email-field
+        .email-field__input-wrapper
+            input(type='email' name='email' placeholder='Email для обратной связи')
+        button.btn.btn--bg-pink Отправить
+
+
+block head
+    title Агробот - заказать услуги
+
+block main
+    section.page.order
+        .container
+            .order__inner
+                .order__col
+                    .order__info
+                        .order__image
+                            img(src=require('./images/order-service/image.png'))
+                        .order__price
+                            h2#total-price Итоговая стоимость - 15 000 руб*
+                            span *Цены уточняйте по почте
+                        
+                .order__col
+                    .order__header
+                        h1.order__title Расчет услуг для ваших задач
+                    form.order__form
+                        ul.order__conf-list
+                            li.order__conf-item
+                                h2 Разработка сайта
+
+                                +conf-bool-select(
+                                    'site-development',
+                                    'Добавить',
+                                    '+ 20 000 рублей за страницу',
+                                    20000,
+                                    'bool-select-1'
+                                )
+                            li.order__conf-item
+                                h2 Создание контента
+
+                                +conf-bool-select(
+                                    'content-creation',
+                                    'Добавить',
+                                    '+ 5 000 рублей за страницу',
+                                    5000,
+                                    'bool-select-2'
+                                )
+                            li.order__conf-item
+                                h2 Продвижение сайта
+
+                                +conf-bool-select(
+                                    'website-promotion',
+                                    'Добавить',
+                                    '+ 5 000 рублей за страницу',
+                                    5000,
+                                    'bool-select-3'
+                                )
+                            li.order__conf-item
+                                h2 Количество страниц
+
+                                +conf-int-select('count-pages', 'int-select-1')
+                            li.order__conf-item
+                                h2 Отправка заявки для заказа
+
+                                +email-field()
+
+block scripts
+    script(src=require('./scripts/order.js')) 

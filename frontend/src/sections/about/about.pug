@@ -1,0 +1,73 @@
+include ../../mixins/tabs/tabs.pug
+
+section.page.fade-in-section.about
+    .container
+        .about__inner
+            .about__tabs
+                +tabs(1)
+                    +tab()
+                        span.about__tab
+                            .about__tab-image.about__tab-image--bg-green
+                                img(src=require('../../icons/about/puzzle.svg'))
+                            span.about__tab-text
+                                | Зачем вам сайт
+                    +tab()
+                        span.about__tab
+                            .about__tab-image.about__tab-image--bg-yellow
+                                img(src=require('../../icons/about/roundcube.svg'))
+                            span.about__tab-text
+                                | Сколько стоит
+                    +tab()
+                        span.about__tab
+                            .about__tab-image.about__tab-image--bg-red
+                                img(src=require('../../icons/about/innovation.svg'))
+                            span.about__tab-text
+                                | Что по времени
+
+            div(class='pdc' id='pdc-1')
+                .pdc__content.pdc__content--show.pdc__content--visible
+                    .about__body
+                        .about-content.about__content
+                            div.about-content__text
+                                h2.about-content__title
+                                    | Сайт как инструмент развития вашего стартапа &#129488;
+                                p.subtitle.about-content__subtitle
+                                    | Сайт помогает стартапам привлекать новых клиентов,
+                                    | рассказывать о своих продуктах и услугах, а также
+                                    | улучшать взаимодействие с уже существующими клиентами
+
+                            .about-content__image-wrapper
+                                .about-content__image
+                                    img(src=require('../../images/about/illustration-1.svg'))
+                                a(class='about-content__image-src' href='https://www.freepik.com/free-vector/organizing-projects-concept-illustration_5911565.htm#query=project&position=12&from_view=search&track=sph') Image by storyset on Freepik
+                .pdc__content
+                    .about__body
+                        .about-content.about__content
+                            div.about-content__text
+                                h2.about-content__title
+                                    | Узнайте о ценах на сайт &#129488;
+                                p.subtitle.about-content__subtitle
+                                    | Стоимость создания сайта зависит от многих факторов, 
+                                    | таких как сложность проекта, количество страниц, 
+                                    | наличие дизайна и т.д. Уточняйте этот вопрос по почте
+
+                            .about-content__image-wrapper
+                                .about-content__image
+                                    img(src=require('../../images/about/illustration-2.svg'))
+                                a(class='about-content__image-src' href='https://www.freepik.com/free-vector/mall-shopping-consumerism-retail-commerce-male-flat-character-with-light-bulb-store-cart-purchase-idea-buying-shoppers-buyers-attraction_12083145.htm#page=2&query=Main%20consumers%20projects&position=5&from_view=search&track=ais') Image by vectorjuice on Freepik
+                .pdc__content
+                    .about__body
+                        .about-content.about__content
+                            div.about-content__text
+                                h2.about-content__title
+                                    | Как быстро мы можем создать сайт для вас &#129488;
+                                p.subtitle.about-content__subtitle
+                                    | Время, необходимое для создания сайта, зависит от
+                                    | многих факторов, таких как сложность проекта,
+                                    | количество страниц, наличие дизайна и т.д.
+                                    | Уточняйте этот вопрос по почте
+
+                            .about-content__image-wrapper
+                                .about-content__image
+                                    img(src=require('../../images/about/illustration-3.svg'))
+                                a(class='about-content__image-src' href='https://www.freepik.com/free-vector/mall-shopping-consumerism-retail-commerce-male-flat-character-with-light-bulb-store-cart-purchase-idea-buying-shoppers-buyers-attraction_12083145.htm#page=2&query=Main%20consumers%20projects&position=5&from_view=search&track=ais') Image by vectorjuice on Freepik
